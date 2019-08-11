@@ -1,0 +1,8 @@
+create virtual machine for each project
+py -m venv env
+
+activate vm
+env\Scripts\activate
+
+install module
+pip install <module>
