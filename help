@@ -6,3 +6,31 @@ env\Scripts\activate
 
 install module
 pip install <module>
+
+--- DEPLOY OPENSHIFT ---
+EX LOGIN:
+oc login --token=x1iXjYLFNkH1li5XbmizYiXDM5T-5h0K8Y-knjdKtsM --server=https://api.us-east-2.online-starter.openshift.com:6443
+
+CREATE APP / DEPLOY
+oc new-app --name <name> python:latest~<url-git>
+
+REDEPLOY
+oc start-build <myapp>
+
+GET STATUS
+oc status
+
+GET PODS
+oc get pods -n <myapp>
+
+EXPOSE A ROUTE
+oc expose svc/<myapp>
+
+CREATE CUSTOM ROUTE
+oc create route edge --service=<myapp> -n <myapp>
+
+GET ROUTE
+oc get route -n <myapp>
+
+DELETE ALL
+oc delete all --selector app=<myapp>
