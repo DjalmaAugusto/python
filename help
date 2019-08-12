@@ -8,6 +8,9 @@ install module
 pip install <module>
 
 --- DEPLOY OPENSHIFT ---
+TUTORIAL IBM OPENSHIFT
+https://cloud.ibm.com/docs/openshift?topic=openshift-openshift_tutorial#openshift_deploy_app  
+
 EX LOGIN:
 oc login --token=x1iXjYLFNkH1li5XbmizYiXDM5T-5h0K8Y-knjdKtsM --server=https://api.us-east-2.online-starter.openshift.com:6443
 
