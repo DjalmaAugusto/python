@@ -1,4 +1,5 @@
 import os
+import socket
 from flask import Flask, request, jsonify
 
 HOST_NAME = os.environ.get('OPENSHIFT_APP_DNS', 'localhost')
